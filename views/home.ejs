@@ -1,0 +1,10 @@
+
+<%- include('partials/header.ejs'); -%>
+<h1>HOME</h1>
+<p><%=startCont%></p>
+<% all_posts.forEach(function(pst){%>
+<h1><%=pst["title"]%></h1>
+<p><%=pst["post"].substring(0,100)+"..."%><a href="http://localhost:3000/posts/<%=pst["title"]%>" id="lnk">Read More</a></p>
+<% }); %>
+<span><a href="http://localhost:3000/compose" style="text-decoration: none;"><div class="compose">+</div></a></span>
+<%- include('partials/footer.ejs'); -%>
